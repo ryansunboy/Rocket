@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tasks>
+    <task>
+        <task-name>首页任务</task-name>
+        <task-class>net.hs.cw.bomp.rocket.task.IndexRocketTask</task-class>
+        <tables>
+            <table>
+                <database-name>hs_base_cs</database-name>
+                <table-name>index_temp_count</table-name>
+                <columns>
+                    <column name="num" column-no="3"></column>
+                </columns>
+                <task-param-columns>
+                    <task-param-column id="tenant-id">tenant_id</task-param-column>
+                </task-param-columns>
+            </table>
+            <table>
+                <database-name>hs_base_cs</database-name>
+                <table-name>index_user_temp_count</table-name>
+                <task-param-columns>
+                    <task-param-column id="tenant-id">tenant_id</task-param-column>
+                    <task-param-column id="user-id">user_id</task-param-column>
+                </task-param-columns>
+            </table>
+        </tables>
+    </task>
+    <task>
+        <task-name>底部任务栏任务</task-name>
+        <task-class>net.hs.cw.bomp.rocket.task.FootRocketTask</task-class>
+        <tables>
+            <table>
+                <database-name>hs_base_cs</database-name>
+                <table-name>sale_tdealprocess</table-name>
+                <task-param-columns>
+                    <task-param-column id="tenant-code">vc_tenantid</task-param-column>
+                </task-param-columns>
+            </table>
+            <table>
+                <database-name>hs_base_cs</database-name>
+                <table-name>parameter</table-name>
+                <task-param-columns>
+                    <task-param-column id="tenant-id">tenant_id</task-param-column>
+                    <task-param-column id="tenant-code">tenant_code</task-param-column>
+                </task-param-columns>
+            </table>
+        </tables>
+    </task>
+    <task>
+        <task-name>流程状态任务</task-name>
+        <task-class>net.hs.cw.bomp.rocket.task.DealProcessRocketTask</task-class>
+        <tables>
+            <table>
+                <database-name>hs_base_cs</database-name>
+                <table-name>sale_tdealprocess</table-name>
+                <task-param-columns>
+                    <task-param-column id="tenant-code">vc_tenantid</task-param-column>
+                </task-param-columns>
+            </table>
+        </tables>
+    </task>
+    <task>
+        <task-name>流程日志任务</task-name>
+        <task-class>net.hs.cw.bomp.rocket.task.LogInfoRocketTask</task-class>
+        <tables>
+            <table>
+                <database-name>hs_base_cs</database-name>
+                <table-name>sale_ttasklog</table-name>
+                <task-param-columns>
+                    <task-param-column id="tenant-code">vc_tenantcode</task-param-column>
+                </task-param-columns>
+            </table>
+        </tables>
+    </task>
+    <task>
+        <task-name>流程TA变化任务</task-name>
+        <task-class>net.hs.cw.bomp.rocket.task.TaProcessRocketTask</task-class>
+        <tables>
+            <table>
+                <database-name>hs_base_cs</database-name>
+                <table-name>sale_tdealprocess</table-name>
+                <task-param-columns>
+                    <task-param-column id="tenant-code">vc_tenantid</task-param-column>
+                </task-param-columns>
+            </table>
+            <table>
+                <database-name>hs_base_cs</database-name>
+                <table-name>sale_ttaparallelprocess</table-name>
+                <task-param-columns>
+                    <task-param-column id="tenant-code">vc_tenantid</task-param-column>
+                </task-param-columns>
+            </table>
+        </tables>
+    </task>
+</tasks>

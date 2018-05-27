@@ -1,0 +1,32 @@
+rocket:
+  datasource:
+   - conf: {
+       host: localhost,
+       username: root,
+       password: ZwxqHiq+Ik0=,
+       port: 3306,
+       autoreconnect: true,
+       timeout: 30,
+       encoding: GBK,
+       heartbeat: 20,
+       encryptkey:
+       }
+     monitorConfig:
+       - C:\Users\shouchen21647\.bomp\rocket-monitor-config.xml
+       - C:\Users\shouchen21647\.bomp\rocket-cache-monitor-config.xml
+     id: 1
+   - conf: {
+       host: rm-bp1xde4nrn9z3x4v1.mysql.rds.aliyuncs.com,
+       username: test2,
+       password: NE/4eYcaH3h8CpaAjdFULQ==,
+       port: 3306,
+       autoreconnect: true,
+       timeout: 30,
+       encoding: GBK,
+       heartbeat: 20,
+       encryptkey: V2G2vQVU8X99CEICt4yEhQ==
+       }
+     monitorConfig:
+       - C:\Users\shouchen21647\.bomp\rocket-monitor-config.xml
+       - C:\Users\shouchen21647\.bomp\rocket-cache-monitor-config.xml
+     id: 2

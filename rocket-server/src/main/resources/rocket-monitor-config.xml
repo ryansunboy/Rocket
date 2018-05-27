@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tables>
+    <table>
+	     <database-name>hs_base_cs</database-name>
+        <table-name>index_user_temp_count</table-name>
+        <monitor-columns>
+		    <column name="num" column-no="4"></column>
+        </monitor-columns>
+        <tasks>
+            <task>
+                <task-name>私募理财师首页统计推送任务</task-name>
+				<task-code>indexData</task-code>
+				<task-description>私募理财师首页统计推送任务</task-description>
+                <task-class>net.hs.cw.bomp.web.task.index.IndexAfpPushTask</task-class>
+                <task-params>
+				    <task-param id="code" name="code" ref-col-no="2"></task-param>
+                    <task-param id="tenantId" name="tenant_id" ref-col-no="5"></task-param>
+                    <task-param id="userId"  name="user_id" ref-col-no="6"></task-param>
+                </task-params>
+            </task>
+        </tasks>
+    </table>
+	<table>
+	     <database-name>hs_trad_01_cs</database-name>
+        <table-name>sale_ttaccoinfo</table-name>
+
+		 <monitor-actions>
+		    <action>insert</action>
+		    <action>delete</action>
+        </monitor-actions>
+		<conditions>
+		     <column name="c_usertype" column-no="50">S</column>
+		</conditions>
+        <tasks>
+            <task>
+                <task-name>私募理财师首页我的客户统计任务</task-name>
+				<task-code>mycustomers</task-code>
+				<task-description>私募理财师首页我的客户统计任务</task-description>
+                <task-class>net.hs.cw.bomp.web.task.index.MyCustCountAfpTask</task-class>
+                <task-params>
+				    <task-param id="tenantCode" name="vc_tenantid" ref-col-no="1"></task-param>
+                </task-params>
+            </task>
+        </tasks>
+    </table>
+
+	<table>
+	     <database-name>hs_trad_01_cs</database-name>
+        <table-name>sale_ttcustinfo</table-name>
+		 <monitor-actions>
+		    <action>insert</action>
+		    <action>delete</action>
+        </monitor-actions>
+        <tasks>
+            <task>
+                <task-name>私募理财师首页我的客户统计任务</task-name>
+				<task-code>mycustomers</task-code>
+				<task-description>私募理财师首页我的客户统计任务</task-description>
+                <task-class>net.hs.cw.bomp.web.task.index.MyCustCountAfpTask</task-class>
+                <task-params>
+				    <task-param id="tenantCode" name="vc_tenantid" ref-col-no="1"></task-param>
+                </task-params>
+            </task>
+        </tasks>
+    </table>
+
+	<table>
+	     <database-name>hs_liq_01_cs</database-name>
+        <table-name>sale_tlconfirm</table-name>
+		<conditions>
+		     <column name="c_businflag" column-no="18">130,122</column>
+		</conditions>
+        <tasks>
+            <task>
+                <task-name>私募理财师首页我的业绩统计任务</task-name>
+				<task-code>MyAchievement</task-code>
+				<task-description>私募理财师首页我的业绩统计任务</task-description>
+                <task-class>net.hs.cw.bomp.web.task.index.MyAchievementCountAfpTask</task-class>
+                <task-params>
+				    <task-param id="tenantCode" name="vc_tenantid" ref-col-no="1"></task-param>
+                </task-params>
+            </task>
+        </tasks>
+    </table>
+		<table>
+	     <database-name>hs_liq_01_cs</database-name>
+        <table-name>sale_tlaccoinfo</table-name>
+		<conditions>
+		     <column name="c_usertype" column-no="42">S</column>
+		</conditions>
+        <tasks>
+            <task>
+                <task-name>私募理财师首页我的业绩统计任务</task-name>
+				<task-code>MyAchievement</task-code>
+				<task-description>私募理财师首页我的业绩统计任务</task-description>
+                <task-class>net.hs.cw.bomp.web.task.index.MyAchievementCountAfpTask</task-class>
+                <task-params>
+				    <task-param id="tenantCode" name="vc_tenantid" ref-col-no="1"></task-param>
+                </task-params>
+            </task>
+        </tasks>
+    </table>
+	<table>
+	     <database-name>hs_liq_01_cs</database-name>
+        <table-name>sale_tlaccoinfo_uft</table-name>
+		<conditions>
+		     <column name="c_usertype" column-no="42">S</column>
+		</conditions>
+        <tasks>
+            <task>
+                <task-name>私募理财师首页我的业绩统计任务</task-name>
+				<task-code>MyAchievement</task-code>
+				<task-description>私募理财师首页我的业绩统计任务</task-description>
+                <task-class>net.hs.cw.bomp.web.task.index.MyAchievementCountAfpTask</task-class>
+                <task-params>
+				    <task-param id="tenantCode" name="vc_tenantid" ref-col-no="1"></task-param>
+                </task-params>
+            </task>
+        </tasks>
+    </table>
+		<table>
+	     <database-name>hs_trad_01_cs</database-name>
+        <table-name>sale_ttrequest</table-name>
+		
+		<conditions>
+		     <column name="c_businflag" column-no="13">020,021,022,023</column>
+			 <column name="vc_comefrom" column-no="64">BROKERPRIVATE</column>			 
+		</conditions>
+        <tasks>
+            <task>
+                <task-name>私募理财师首页我的订单统计任务</task-name>
+				<task-code>MyOrderRequestCountAfpTask</task-code>
+				<task-description>私募理财师首页我的订单统计任务</task-description>
+                <task-class>net.hs.cw.bomp.web.task.index.MyOrderRequestCountAfpTask</task-class>
+                <task-params>
+				    <task-param id="tenantCode" name="vc_tenantid" ref-col-no="1"></task-param>
+                </task-params>
+            </task>
+        </tasks>
+    </table>
+	<table>
+	     <database-name>hs_trad_01_cs</database-name>
+        <table-name>sale_tthrequest</table-name>
+		
+		<conditions>
+		     <column name="c_businflag" column-no="13">020,021,022,023</column>
+			 <column name="vc_comefrom" column-no="64">BROKERPRIVATE</column>			 
+		</conditions>
+        <tasks>
+            <task>
+                <task-name>私募理财师首页我的订单统计任务</task-name>
+				<task-code>MyOrderRequestCountAfpTask</task-code>
+				<task-description>私募理财师首页我的订单统计任务</task-description>
+                <task-class>net.hs.cw.bomp.web.task.index.MyOrderRequestCountAfpTask</task-class>
+                <task-params>
+				    <task-param id="tenantCode" name="vc_tenantid" ref-col-no="1"></task-param>
+                </task-params>
+            </task>
+        </tasks>
+    </table>
+	<table>
+	     <database-name>hs_trad_01_cs</database-name>
+        <table-name>sale_ttcontractattachinfo</table-name>
+        <tasks>
+            <task>
+                <task-name>私募理财师首页我的订单统计任务</task-name>
+				<task-code>MyOrderRequestCountAfpTask</task-code>
+				<task-description>私募理财师首页我的订单统计任务</task-description>
+                <task-class>net.hs.cw.bomp.web.task.index.MyOrderRequestCountAfpTask</task-class>
+                <task-params>
+				    <task-param id="tenantCode" name="vc_tenantid" ref-col-no="1"></task-param>
+                </task-params>
+            </task>
+			
+        </tasks>
+    </table>
+	<table>
+	     <database-name>hs_trad_01_cs</database-name>
+        <table-name>sale_ttstaticshare</table-name>
+        <tasks>
+            <task>
+                <task-name>私募理财师首页我的订单统计任务</task-name>
+				<task-code>MyOrderRequestCountAfpTask</task-code>
+				<task-description>私募理财师首页我的订单统计任务</task-description>
+                <task-class>net.hs.cw.bomp.web.task.index.MyOrderRequestCountAfpTask</task-class>
+                <task-params>
+				    <task-param id="tenantCode" name="vc_tenantid" ref-col-no="1"></task-param>
+                </task-params>
+            </task>
+			
+        </tasks>
+    </table>
+  
+</tables>
