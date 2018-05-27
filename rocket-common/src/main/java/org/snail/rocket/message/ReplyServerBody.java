@@ -1,0 +1,21 @@
+package org.snail.rocket.message;
+
+/**
+ * ${DESCRIPTION}
+ *
+ * @author shouchen<shouchen21647@hundsun.com>
+ * @create 2018-02-06 16:29
+ */
+
+public class ReplyServerBody extends ReplyBody {
+    private String serverInfo;
+    public ReplyServerBody(String serverInfo) {
+        this.serverInfo = serverInfo;
+    }
+    public String getServerInfo() {
+        return serverInfo;
+    }
+    public void setServerInfo(String serverInfo) {
+        this.serverInfo = serverInfo;
+    }
+}
